@@ -1,0 +1,66 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "e646c795-3d85-45bf-a727-00937c7633b7",
+  "tenantId": "24139d14-c62c-4c47-8bdd-ce71ea1d50cf",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "Deploy Subscription Tags GEM-LZ-DDA-PROD-01",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/GEMLZPL/providers/Microsoft.Authorization/policySetDefinitions/2b2dce6e-e569-49f3-af51-7f69d922ac51",
+  "scope": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df",
+  "parameters": {
+   "Value_policy_subnetsoutheastasia": {
+    "value": "subnetsoutheastasia"
+   },
+   "value_policy_subnetnortheurope": {
+    "value": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df/resourceGroups/rg-network-northeurope/providers/Microsoft.Network/virtualNetworks/vnet-dda-northeurope-prod-001/subnets/subnet-back-northeurope-001"
+   },
+   "Value_policy_subnetwesteurope": {
+    "value": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df/resourceGroups/rg-network-westeurope/providers/Microsoft.Network/virtualNetworks/vnet-dda-westeurope-prod-001/subnets/subnet-back-westeurope-001"
+   },
+   "Value_policy_loganalyticsworkspace_westeurope": {
+    "value": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df/resourceGroups/rg-infrastructure-westeurope/providers/Microsoft.OperationalInsights/workspaces/law-infrastructure-westeurope-001/"
+   },
+   "Value_policy_loganalyticsworkspace_northeurope": {
+    "value": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df/resourceGroups/rg-infrastructure-northeurope/providers/Microsoft.OperationalInsights/workspaces/law-infrastructure-northeurope-001"
+   },
+   "Value_policy_loganalyticsworkspace_southeastasia": {
+    "value": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df/resourceGroups/rg-infrastructure-southeastasia/providers/Microsoft.OperationalInsights/workspaces/law-infrastructure-southeastasia-001"
+   },
+   "Value_policy_storageaccount_westeurope": {
+    "value": "/subscriptions/c96c13f8-ae63-492d-9b8b-27cf8bc5569a/resourceGroups/rg-infrastructure-westeurope/providers/Microsoft.Storage/storageAccounts/sansgflowlogshdny0i3c60x"
+   },
+   "Value_policy_storageaccount_northeurope": {
+    "value": "/subscriptions/c96c13f8-ae63-492d-9b8b-27cf8bc5569a/resourceGroups/rg-infrastructure-northeurope/providers/Microsoft.Storage/storageAccounts/sansgflowlogsp8d2wisa82i"
+   },
+   "Value_policy_storageaccount_southeastasia": {
+    "value": "/subscriptions/c96c13f8-ae63-492d-9b8b-27cf8bc5569a/resourceGroups/rg-infrastructure-southeastasia/providers/Microsoft.Storage/storageAccounts/sansgflowlogsrx8yfbc2xfk"
+   },
+   "Value_giac_trigram_unique_id": {
+    "value": "DDA"
+   },
+   "Value_Organization Hierarchy": {
+    "value": "GEM.IS.DDA,GEM.IS.CIS.INF,GEM.IS.ARC"
+   },
+   "Value_env": {
+    "value": "PRD"
+   }
+  },
+  "description": "Deploy Subscription Tags:policy_subnetwesteurope policy_subnetnortheurope policy_subnetsoutheastasia policy_loganalyticsworkspace_westeurope policy_loganalyticsworkspace_northeurope policy_loganalyticsworkspace_southeastasia, giac_trigram_unique_id , Organization Hierarchy, env",
+  "metadata": {
+   "createdBy": "20e0b573-4142-4acc-a238-d5de41954d2e",
+   "createdOn": "2022-04-14T00:30:36.4828119Z",
+   "updatedBy": "20e0b573-4142-4acc-a238-d5de41954d2e",
+   "updatedOn": "2022-06-21T09:42:07.1200495Z"
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/51418462-6730-4549-9bc1-08e06fa717df/providers/Microsoft.Authorization/policyAssignments/czpwg6GLH3fPpW2MERMZkPf3",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "czpwg6GLH3fPpW2MERMZkPf3",
+ "location": "westeurope"
+}

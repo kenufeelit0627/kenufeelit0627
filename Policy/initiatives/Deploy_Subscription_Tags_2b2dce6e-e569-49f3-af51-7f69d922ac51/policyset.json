@@ -1,0 +1,267 @@
+{
+ "properties": {
+  "displayName": "Deploy Subscription Tags",
+  "policyType": "Custom",
+  "description": "Deploy Subscription Tags:\npolicy_subnetwesteurope\npolicy_subnetnortheurope\npolicy_subnetsoutheastasia\npolicy_loganalyticsworkspace_westeurope\npolicy_loganalyticsworkspace_northeurope\npolicy_loganalyticsworkspace_southeastasia",
+  "metadata": {
+   "category": "Tags",
+   "version": "1.0.0",
+   "createdBy": "20e0b573-4142-4acc-a238-d5de41954d2e",
+   "createdOn": "2022-04-13T22:46:31.211122Z",
+   "updatedBy": "20e0b573-4142-4acc-a238-d5de41954d2e",
+   "updatedOn": "2022-06-21T07:37:09.9637242Z"
+  },
+  "parameters": {
+   "Value_policy_subnetsoutheastasia": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_subnetsoutheastasia",
+     "description": null
+    },
+    "defaultValue": "Value_for_policy_subnetsoutheastasia"
+   },
+   "value_policy_subnetnortheurope": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_subnetnortheurope",
+     "description": null
+    },
+    "defaultValue": "Value_for_policy_subnetnortheurope"
+   },
+   "Value_policy_subnetwesteurope": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_subnetwesteurope",
+     "description": null
+    },
+    "defaultValue": "Value_for_policy_subnetwesteurope"
+   },
+   "Value_policy_loganalyticsworkspace_westeurope": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_loganalyticsworkspace_westeurope"
+    },
+    "defaultValue": "Value_policy_loganalyticsworkspace_westeurope"
+   },
+   "Value_policy_loganalyticsworkspace_northeurope": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_loganalyticsworkspace_northeurope"
+    },
+    "defaultValue": "Value_policy_loganalyticsworkspace_northeurope"
+   },
+   "Value_policy_loganalyticsworkspace_southeastasia": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_loganalyticsworkspace_southeastasia"
+    },
+    "defaultValue": "Value_policy_loganalyticsworkspace_southeastasia"
+   },
+   "Value_giac_trigram_unique_id": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_giac_trigram_unique_id"
+    },
+    "defaultValue": "Value_giac_trigram_unique_id"
+   },
+   "Value_Organization Hierarchy": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_Organization Hierarchy"
+    },
+    "defaultValue": "Value_Organization Hierarchy"
+   },
+   "Value_env": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_env",
+     "description": null
+    },
+    "defaultValue": "Value_env"
+   },
+   "Value_policy_storageaccount_westeurope": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_storageaccount_westeurope"
+    },
+    "defaultValue": "Value_policy_storageaccount_westeurope"
+   },
+   "Value_policy_storageaccount_northeurope": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_storageaccount_northeurope"
+    },
+    "defaultValue": "Value_policy_storageaccount_northeurope"
+   },
+   "Value_policy_storageaccount_southeastasia": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Value_policy_storageaccount_southeastasia",
+     "description": null
+    },
+    "defaultValue": "Value_policy_storageaccount_southeastasia"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_subnetwesteurope"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_subnetwesteurope')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_2",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_subnetnortheurope"
+     },
+     "tagValue": {
+      "value": "[parameters('value_policy_subnetnortheurope')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_3",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_subnetsoutheastasia"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_subnetsoutheastasia')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_4",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_loganalyticsworkspace_westeurope"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_loganalyticsworkspace_westeurope')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_5",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_loganalyticsworkspace_northeurope"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_loganalyticsworkspace_northeurope')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_6",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_loganalyticsworkspace_southeastasia"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_loganalyticsworkspace_southeastasia')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_7",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "giac_trigram_unique_id"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_giac_trigram_unique_id')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_8",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "Organization Hierarchy"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_Organization Hierarchy')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_9",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "env"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_env')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_10",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_storageaccount_westeurope"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_storageaccount_westeurope')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_11",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_storageaccount_northeurope"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_storageaccount_northeurope')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Add a tag to subscriptions_12",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/96d9a89c-0d67-41fc-899d-2b9599f76a24",
+    "parameters": {
+     "tagName": {
+      "value": "policy_storageaccount_southeastasia"
+     },
+     "tagValue": {
+      "value": "[parameters('Value_policy_storageaccount_southeastasia')]"
+     }
+    },
+    "groupNames": []
+   }
+  ]
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/GEMLZPL/providers/Microsoft.Authorization/policySetDefinitions/2b2dce6e-e569-49f3-af51-7f69d922ac51",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "2b2dce6e-e569-49f3-af51-7f69d922ac51"
+}
