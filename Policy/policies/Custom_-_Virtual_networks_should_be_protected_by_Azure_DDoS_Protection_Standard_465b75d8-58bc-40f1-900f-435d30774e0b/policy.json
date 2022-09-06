@@ -1,0 +1,85 @@
+{
+ "properties": {
+  "displayName": "Custom - Virtual networks should be protected by Azure DDoS Protection Standard",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "Protect your virtual networks against volumetric and protocol attacks with Azure DDoS Protection Standard. For more information, visit https://aka.ms/ddosprotectiondocs.",
+  "metadata": {
+   "category": "Network",
+   "createdBy": "ba438e52-918f-4dea-9cdd-17244bc4aeb1",
+   "createdOn": "2022-09-06T10:05:19.4246433Z",
+   "updatedBy": "ba438e52-918f-4dea-9cdd-17244bc4aeb1",
+   "updatedOn": "2022-09-06T10:42:07.7868269Z"
+  },
+  "parameters": {
+   "effect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Modify",
+     "Audit",
+     "Disabled"
+    ],
+    "defaultValue": "Modify"
+   },
+   "ddosPlan": {
+    "type": "String",
+    "metadata": {
+     "displayName": "DDoS Protection Plan",
+     "description": "DDoS Protection Plan resource to be associated to the virtual networks",
+     "strongType": "Microsoft.Network/ddosProtectionPlans"
+    },
+    "defaultValue": "/subscriptions/325b0c10-61fb-4598-b071-f9ac5989fc2c/resourceGroups/rg-engie-group-security-24139d14-c62c-4c47-8bdd-ce71ea1d50cf/providers/Microsoft.Network/ddosProtectionPlans/engie-group-ddos-24139d14-c62c-4c47-8bdd-ce71ea1d50cf"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/virtualNetworks"
+     },
+     {
+      "anyOf": [
+       {
+        "field": "Microsoft.Network/virtualNetworks/enableDdosProtection",
+        "notEquals": true
+       },
+       {
+        "field": "Microsoft.Network/virtualNetworks/ddosProtectionPlan",
+        "equals": "/subscriptions/325b0c10-61fb-4598-b071-f9ac5989fc2c/resourceGroups/rg-engie-group-security-24139d14-c62c-4c47-8bdd-ce71ea1d50cf/providers/Microsoft.Network/ddosProtectionPlans/engie-group-ddos-24139d14-c62c-4c47-8bdd-ce71ea1d50cf"
+       }
+      ]
+     }
+    ]
+   },
+   "then": {
+    "effect": "[parameters('effect')]",
+    "details": {
+     "conflictEffect": "audit",
+     "roleDefinitionIds": [
+      "/providers/microsoft.authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7"
+     ],
+     "operations": [
+      {
+       "operation": "addOrReplace",
+       "field": "Microsoft.Network/virtualNetworks/enableDdosProtection",
+       "value": true
+      },
+      {
+       "operation": "addOrReplace",
+       "field": "Microsoft.Network/virtualNetworks/ddosProtectionPlan.id",
+       "value": "[parameters('ddosPlan')]"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "id": "/subscriptions/6c8542ee-9681-43dc-8ddf-353f56ac5cef/providers/Microsoft.Authorization/policyDefinitions/465b75d8-58bc-40f1-900f-435d30774e0b",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "465b75d8-58bc-40f1-900f-435d30774e0b"
+}
